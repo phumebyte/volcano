@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* Apply Bitcount Grid Double font */ 
+.bitcount-text { 
+    font-family: "Bitcount Grid Double", sans-serif; 
+} 
+
+/* Apply National Park font */ 
+.national-text { 
+    font-family: "National Park", sans-serif; 
+} 
+
+/* Example: set default font for body */ 
+
+body { 
+    font-family: "National Park", sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}

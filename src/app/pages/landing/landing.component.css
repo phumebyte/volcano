@@ -1,0 +1,80 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* Centers horizontally */
+    justify-content: center;   /* Centers vertically */
+    height: 100vh;
+    width: 100vw;
+    background-color: #8B0000;
+    margin: 0;
+    /* background-color: #FFF0F5; */
+}
+
+.quizlet-container {
+    background-color: #8B0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centers content vertically */
+    align-items: center;       /* Centers content horizontally */
+    color: #F48FB1;
+    font-size: large;
+    width: 60%;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;        /* Ensures text inside is centered */
+}
+
+.quizlet-container p {
+    margin: 0;                 /* Removes default spacing */
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #F48FB1;
+    color: #8B0000;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: medium;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sparkle effect using a pseudo-element */
+button::after {
+    content: "";
+    animation: sparkle 2s infinite;
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.6),
+        transparent
+    );
+    transform: skewX(-20deg);
+}
+
+/* Animate the sparkle sweep */
+button:hover::after {
+    animation: sparkle 1s ease-in-out;
+}
+
+@keyframes sparkle {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+
