@@ -19,7 +19,7 @@ export class LoveCalculatorComponent {
       localStorage.setItem('loveAnswer', value);
 
       // Navigate to home or another route
-      this.router.navigate(['/loading']);
+      this.router.navigate(['/results']);
     } else {
       // Do nothing if input is empty
       alert('Please enter a name before submitting!');

@@ -1,1 +1,14 @@
-<p>loading works!</p>
+<main>
+    <div class="container">
+        <div class="loading-overlay">
+            <!-- Heart -->
+            <div class="glowing-heart"></div>
+
+            <!-- Animated Message -->
+            <div class="loading-message bitcount-text" [class.fade-out]="fadingOut">
+                {{ currentMessage }}
+            </div>
+        </div>
+    </div>
+    
+</main>

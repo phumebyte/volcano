@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centers horizontally */
+  justify-content: center;   /* Centers vertically */
+  height: 100vh;
+  width: 100vw;
+  background-color: #8B0000; /* solid background */
+  margin: 0;
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent; /* keep background solid */
+}
+
+.glowing-heart {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #ff3c41;
+  transform: rotate(-45deg);
+  animation: pulse 1s infinite alternate;
+  box-shadow: 0 0 20px #ff3c41, 0 0 40px #ff3c41;
+}
+
+.glowing-heart::before,
+.glowing-heart::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff3c41;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ff3c41, 0 0 40px #ff3c41;
+}
+
+.glowing-heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.glowing-heart::after {
+  top: 0;
+  left: 25px;
+}
+
+@keyframes pulse {
+  0% { transform: rotate(-45deg) scale(1); }
+  100% { transform: rotate(-45deg) scale(1.2); }
+}
+
+/* Message text with gap */
+.loading-message {
+  margin-top: 30px; /* creates space below the heart */
+  color: #ffb6c1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.loading-message.fade-out {
+  opacity: 0;
+}

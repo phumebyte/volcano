@@ -6,6 +6,7 @@ import { ConfettiComponent } from './components/confetti/confetti.component';
 import { SweetValentineComponent } from './components/sweet-valentine/sweet-valentine.component';
 import { LoveCalculatorComponent } from './components/love-calculator/love-calculator.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { ResultsComponent } from './components/results/results.component';
 
 export const routes: Routes = [
     { path: 'splash', component: SplashComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'confetti', component: ConfettiComponent },
     { path: 'sweet-valentine', component: SweetValentineComponent}, 
     { path: 'love-calculator', component: LoveCalculatorComponent},
-    { path: 'loading', component: LoadingComponent}
+    { path: 'loading', component: LoadingComponent}, 
+    { path: 'results', component: ResultsComponent}
 ];

@@ -15,7 +15,7 @@ main {
     flex-direction: column;
     justify-content: center;   /* Centers content vertically */
     align-items: center;       /* Centers content horizontally */
-    color: #F48FB1;
+    color: #ffb6c1;
     font-size: large;
     width: 60%;
     height: 200px;
@@ -35,7 +35,7 @@ main {
 }
 
 button {
-    background-color: #F48FB1;
+    background-color: #ffb6c1;
     color: #8B0000;
     border: none;
     border-radius: 30px;
@@ -81,4 +81,18 @@ button:hover::after {
         left: 125%;
     }
 }
+
+.congrats-message {
+  margin-top: 20px;
+  text-align: center;
+  color: #ffb6c1;
+  font-size: 1.2rem;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 

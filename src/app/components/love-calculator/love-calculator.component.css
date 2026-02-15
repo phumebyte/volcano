@@ -22,7 +22,7 @@ img {
 /* Center calculator overlay */
 .calculator {
   position: absolute; /* overlay on top of image */
-  top: 50%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   

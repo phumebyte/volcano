@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-single',
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './single.component.html',
   styleUrl: './single.component.css'
 })
@@ -17,5 +18,11 @@ export class SingleComponent implements OnInit{
       noBtn.style.display = 'none'; 
       buttons.classList.add('center-yes');  
     }); 
+  }
+
+  congratsVisible: boolean = false; 
+    
+  showCongratsMessage(): void { 
+    this.congratsVisible = true; 
   }
 }

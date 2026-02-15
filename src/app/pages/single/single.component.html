@@ -1,13 +1,18 @@
 <main class="main">
     <div class="quizlet-container">
         <p class="bitcount-text"> Will you be my Valentine?</p>
+
         <div class="buttons">
             <button class="Yes-Valentine" routerLink="/sweet-valentine">
                 <p class="bitcount-text">YES</p>
             </button>
-            <button class="No-Valentine">
+            <button class="No-Valentine" (click)="showCongratsMessage()">
                 <p class="bitcount-text">NO</p>
             </button>
         </div>
+    <!-- Congrats message only shows when flag is true -->
+    <div class="congrats-message" *ngIf="congratsVisible">
+      <p class="bitcount-text">Oops... lol</p>
+    </div>
     </div>
 </main>

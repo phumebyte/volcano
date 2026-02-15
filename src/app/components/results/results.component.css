@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centers horizontally */
+  justify-content: center;   /* Centers vertically */
+  height: 100vh;
+  width: 100vw;
+  background-color: #8B0000; /* solid background */
+  margin: 0;
+}
+
+.results-container p { 
+  text-align: center; /* centers text horizontally */ 
+  display: flex; 
+  flex-direction: column; /* stack items vertically */ 
+  align-items: center; /* center each line */ 
+  justify-content: center; /* center vertically if needed */ 
+  gap: 4px; /* small space between lines */ 
+}
+
+.progress-bar {
+  width: 300px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid#ba7070;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg,#ba7070, #8B0000 );
+  transition: width 0.3s ease;
+}
+
+p {
+    font-size: 2rem;
+    color: #ffb6c1;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffb6c1;
+}

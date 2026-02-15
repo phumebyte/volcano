@@ -1,0 +1,13 @@
+<main>
+  <div class="results-container">
+    <p class="bitcount-text"> {{ storedName }} <span>+</span> PHUME </p>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="progress"></div>
+    </div>
+
+    <!-- Display percentage -->
+    <p class="bitcount-text">{{ progress }}%</p>
+  </div>
+</main>
