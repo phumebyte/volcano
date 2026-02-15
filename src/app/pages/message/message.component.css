@@ -16,7 +16,7 @@ img {
 /* Overlay replay button */
 .replay-btn {
   position: absolute;              /* overlay on top of image */
-  bottom: 40px;                    /* distance from bottom */
+  bottom: 115px;                    /* distance from bottom */
   left: 50%;                       /* center horizontally */
   transform: translateX(-50%);     /* adjust for true centering */
   text-align: center;

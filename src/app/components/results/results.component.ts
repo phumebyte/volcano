@@ -22,7 +22,7 @@ export class ResultsComponent implements OnInit {
     }
 
     // Names that always get 100%
-    const always100 = ['PHUME', 'NEO', 'TAKU', 'BONGANI', 'SHAUN', 'MOSEKI', 'KUNDAI'];
+    const always100 = ['PHUME', 'NEO', 'TAKU', 'BONGANI', 'SHAUN', 'MOSEKI', 'KUNDAI', 'MICAELLA'];
 
     if (this.storedName && always100.includes(this.storedName)) {
       this.target = 100;
@@ -41,6 +41,6 @@ export class ResultsComponent implements OnInit {
         clearInterval(this.intervalId);
         this.showContinue = true; // show button when animation finishes
       }
-    }, 50); // speed of animation
+    }, 100); // speed of animation
   }
 }
