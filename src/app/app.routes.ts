@@ -7,6 +7,7 @@ import { SweetValentineComponent } from './components/sweet-valentine/sweet-vale
 import { LoveCalculatorComponent } from './components/love-calculator/love-calculator.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ResultsComponent } from './components/results/results.component';
+import { MessageComponent } from './pages/message/message.component';
 
 export const routes: Routes = [
     { path: 'splash', component: SplashComponent },
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'sweet-valentine', component: SweetValentineComponent}, 
     { path: 'love-calculator', component: LoveCalculatorComponent},
     { path: 'loading', component: LoadingComponent}, 
-    { path: 'results', component: ResultsComponent}
+    { path: 'results', component: ResultsComponent}, 
+    { path: 'message', component: MessageComponent},
 ];

@@ -1,0 +1,39 @@
+main {
+  position: relative;              /* positioning context */
+  height: 100vh;
+  width: 100vw;
+  background-color: #8B0000;
+  margin: 0;
+}
+
+img {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  object-fit: cover;               /* ensures image fills nicely */
+}
+
+/* Overlay replay button */
+.replay-btn {
+  position: absolute;              /* overlay on top of image */
+  bottom: 40px;                    /* distance from bottom */
+  left: 50%;                       /* center horizontally */
+  transform: translateX(-50%);     /* adjust for true centering */
+  text-align: center;
+}
+
+.replay-btn button { 
+  padding: 10px 20px; 
+  font-size: 1.2rem; 
+  background-color: #ffb6c1; 
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer; 
+  color: #8B0000; 
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

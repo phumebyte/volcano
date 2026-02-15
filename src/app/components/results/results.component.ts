@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-results',
+  imports: [CommonModule, RouterLink],
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css']
 })
@@ -10,6 +13,7 @@ export class ResultsComponent implements OnInit {
   target: number = 0;
   intervalId: any;
   storedName: string = '';
+  showContinue: boolean = false;
 
   ngOnInit(): void {
     const name = localStorage.getItem('loveAnswer');
@@ -23,7 +27,7 @@ export class ResultsComponent implements OnInit {
     if (this.storedName && always100.includes(this.storedName)) {
       this.target = 100;
     } else {
-      this.target = Math.floor(Math.random() * 61) + 60; // random between 60–100
+      this.target = Math.floor(Math.random() * 41) + 40; // random between 40–100
     }
 
     this.animateProgress();
@@ -35,6 +39,7 @@ export class ResultsComponent implements OnInit {
         this.progress++;
       } else {
         clearInterval(this.intervalId);
+        this.showContinue = true; // show button when animation finishes
       }
     }, 50); // speed of animation
   }

@@ -1,6 +1,8 @@
 <main>
+  <img src="assets/results.png" alt="results"> 
+
   <div class="results-container">
-    <p class="bitcount-text"> {{ storedName }} <span>+</span> PHUME </p>
+    <p class="bitcount-text">{{ storedName }} <span>+</span> PHUME</p>
 
     <!-- Progress Bar -->
     <div class="progress-bar">
@@ -9,5 +11,10 @@
 
     <!-- Display percentage -->
     <p class="bitcount-text">{{ progress }}%</p>
+
+    <!-- Continue button (hidden until flag is true) -->
+    <div *ngIf="showContinue" class="continue-btn">
+      <button routerLink="/message" class="bitcount-text">CONTINUE</button>
+    </div>
   </div>
 </main>

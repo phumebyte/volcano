@@ -1,21 +1,38 @@
 main {
+  position: relative;              /* make main a positioning context */
   display: flex;
-  flex-direction: column;
-  align-items: center;       /* Centers horizontally */
-  justify-content: center;   /* Centers vertically */
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #8B0000; /* solid background */
+  background-color: #8B0000;
   margin: 0;
 }
 
+img {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  object-fit: cover;               /* ensures image fills nicely */
+}
+
+/* Overlay container */
+.results-container {
+  position: absolute;              /* overlay on top of image */
+  top: 50%;                        /* center vertically */
+  left: 50%;                       /* center horizontally */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffb6c1;
+}
+
 .results-container p { 
-  text-align: center; /* centers text horizontally */ 
-  display: flex; 
-  flex-direction: column; /* stack items vertically */ 
-  align-items: center; /* center each line */ 
-  justify-content: center; /* center vertically if needed */ 
-  gap: 4px; /* small space between lines */ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 2rem;
 }
 
 .progress-bar {
@@ -24,24 +41,36 @@ main {
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
-  border: 2px solid#ba7070;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  border: 2px solid #ba7070;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg,#ba7070, #8B0000 );
+  background: linear-gradient(90deg, #ba7070, #8B0000);
   transition: width 0.3s ease;
 }
 
-p {
-    font-size: 2rem;
-    color: #ffb6c1;
+.continue-btn {
+    margin-top: 20px; 
+    display: flex; 
+    justify-content: center; /* centers the button horizontally */
     text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #ffb6c1;
+.continue-btn button { 
+  padding: 10px 20px; 
+  font-size: 1.2rem; 
+  background-color: #ffb6c1; 
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer; 
+  color: #8B0000; 
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
