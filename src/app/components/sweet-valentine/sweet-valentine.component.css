@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #8B0000;
+  margin: 0;
+}
+
+.title-card {
+  position: relative; /* anchor for absolute children */
+  display: inline-block;
+}
+
+img {
+  height: 100vh;
+  width: auto;
+  display: block;
+}
+
+.button {
+  position: absolute; 
+  left: 50%; 
+  bottom: 90px; /* moves text upward relative to the bottom of the image */
+  transform: translateX(-50%);
+  color: #F48FB1;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.continue-btn {
+  margin-top: 30px;          /* spacing below the author text */
+  padding: 10px 20px;        /* button size */
+  font-size: 1.3rem;
+  color: #8B0000;            /* text color */
+  background-color: #ffb6c1;/* button background */
+  border: none;
+  border-radius: 30px;        /* rounded corners */
+  cursor: pointer;
+  animation: blink 1.5s infinite; /* optional blink effect */
+}
+
+.continue-btn:hover {
+  background-color: #ffb6c1; /* lighter pink on hover */
+}
+
+/* Blink animation reused */
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}

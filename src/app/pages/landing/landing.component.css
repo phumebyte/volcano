@@ -63,6 +63,10 @@ button::after {
     transform: skewX(-20deg);
 }
 
+.buttons.center-no { 
+    justify-content: center; 
+}
+
 /* Animate the sparkle sweep */
 button:hover::after {
     animation: sparkle 1s ease-in-out;
