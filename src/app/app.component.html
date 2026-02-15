@@ -1,8 +1,14 @@
-<router-outlet />
+<div class="app-wrapper" *ngIf="isPhone; else notPhone">
+  <router-outlet></router-outlet>
 
-<audio id="bg-audio" autoplay loop> 
+  <!-- Background audio -->
+  <audio id="bg-audio" autoplay loop>
     <source src="assets/harp-music.mp3" type="audio/mpeg">
-</audio>
-  
-  
+  </audio>
+</div>
 
+<ng-template #notPhone>
+  <div class="not-phone">
+    <p class="bitcount-text">Use a Phone!</p>
+  </div>
+</ng-template>

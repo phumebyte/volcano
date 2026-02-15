@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #8B0000;
+}
+
+.app-wrapper {
+  max-width: 480px;   /* phone width */
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-phone {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8B0000;
+  color: #ffb6c1;
+  font-size: 2rem;
+  text-align: center;
+}
