@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SplashComponent } from "./pages/splash/splash.component";
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SplashComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'my-sweet-valentine';
+export class AppComponent implements AfterViewInit {
+  ngAfterViewInit(): void { 
+    const audio = document.getElementById('bg-audio') as HTMLAudioElement; 
+    if (audio) { audio.volume = 0.2; // set soft volume (20%) 
+  } }
 }
