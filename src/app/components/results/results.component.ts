@@ -22,7 +22,7 @@ export class ResultsComponent implements OnInit {
     }
 
     // Names that always get 100%
-    const always100 = ['PHUME', 'NEO', 'TAKU', 'BONGANI', 'SHAUN', 'MOSEKI', 'KUNDAI', 'MICAELLA'];
+    const always100 = ['PHUME', 'NEO', 'MICAELLA'];
 
     if (this.storedName && always100.includes(this.storedName)) {
       this.target = 100;
