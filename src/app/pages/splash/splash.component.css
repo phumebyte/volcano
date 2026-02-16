@@ -22,7 +22,7 @@ img {
 .author {
   position: absolute; 
   left: 50%; 
-  bottom: 100px; /* moves text upward relative to the bottom of the image */
+  bottom: 80px; /* moves text upward relative to the bottom of the image */
   transform: translateX(-50%);
   color: #ffb6c1;
   font-size: 1.5rem;
