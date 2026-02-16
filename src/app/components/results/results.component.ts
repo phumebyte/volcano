@@ -27,7 +27,7 @@ export class ResultsComponent implements OnInit {
     if (this.storedName && always100.includes(this.storedName)) {
       this.target = 100;
     } else {
-      this.target = Math.floor(Math.random() * 41) + 40; // random between 40–100
+      this.target = Math.floor(Math.random() * 51) + 50; // random between 50–100
     }
 
     this.animateProgress();
